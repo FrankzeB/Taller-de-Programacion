@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad Nº2 - Clase II</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-lg-6 mb-3">
+          <div class="mb-3">
+            <label class="form-label">Cateto Opuesto:</label>
+            <input
+              placeholder="Cateto Opuesto"
+              id="inp_catetoo"
+              class="form-control"
+              type="number"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Cateto Adyacente:</label>
+            <input
+              placeholder="Cateto Adyacente"
+              id="inp_catetoa"
+              class="form-control"
+              type="number"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-3">
+          <div class="mb-3">
+            <h4>Hipotenusa:</h4>
+            <h4 id="resultado">0</h4>
+          </div>
+        </div>
+
+        <button id="btn_calcular" class="btn btn-success">Calcular</button>
+      </div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
