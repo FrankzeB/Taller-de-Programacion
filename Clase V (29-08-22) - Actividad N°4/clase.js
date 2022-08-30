@@ -1,8 +1,8 @@
 export default class Tienda {
   constructor() {}
 
-  obtener_tienda = async () => {
-    const tienda = await fetch("https://fakestoreapi.com/products");
+  obtener_tienda = async (categoria) => {
+    const tienda = await fetch("https://fakestoreapi.com/products"+categoria);
     const lista_tienda = await tienda.json();
 
     let columnas = [];
