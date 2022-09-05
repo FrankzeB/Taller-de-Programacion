@@ -1,5 +1,4 @@
 //vamos a crear un arreglo
-
 let lenguajes = ["Java", "Python", "JavaScript", "C++", "Visual Basic", "Go"];
 
 //longitud de un arreglo
@@ -29,3 +28,22 @@ console.log(lenguajes);
 //como eliminar el primer elemento de un arreglo (línea 26 & 27)
 lenguajes.shift();
 console.log(lenguajes);
+
+//como encontrar el indice de un elemento y mostrarlo posteriormente
+let indice = lenguajes.indexOf("JavaScript");
+console.log(lenguajes[indice]);
+
+//como eliminar un elemento del arreglo segun su indice
+let indice2 = lenguajes.indexOf("C++");
+let eliminados = lenguajes.splice(indice2, 2);
+console.log(lenguajes);
+console.log("Eliminados: " + eliminados);
+
+//como agrego elementos dentro de un arreglo
+lenguajes.splice(indice, 0, "Visual Basic");
+console.log(lenguajes);
+
+//como copiar un arreglo
+let copia = lenguajes.slice();
+copia.push("Ruby");
+console.log(copia);
