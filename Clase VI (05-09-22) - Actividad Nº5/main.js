@@ -1,3 +1,29 @@
+//Ejercicio 1
+obtener_api = async () => {
+  const api = await fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales");
+
+  const lista_api = await api.json();
+
+  let filas = [];
+  lista_api.forEach((element, index) => {
+    let fila = `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${element.casa.compra}</td>
+            <td>${element.casa.venta}</td>
+            <td>${element.casa.agencia}</td>
+            <td>${element.casa.nombre}</td>
+            <td>${element.casa.variacion}</td>
+            <td>${element.casa.ventaCero}</td>
+            <td>${element.casa.decimales}</td>
+        </tr>
+    `;
+    filas.push(fila);
+  });
+  document.getElementById("tbl_body").innerHTML = filas.join("");
+};
+obtener_api();
+
 //A. Crear el siguiente array tal y como se muestra a continuación. Deberá crearse de manera global.
 let criptos = [
   "Bitcoin",
